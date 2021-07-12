@@ -182,7 +182,7 @@ activity %>%
 ## 7 2012-11-14            1
 ## 8 2012-11-30            1
 ```
-So for these 8 days, there is no data available at all in `steps`. Since there are $12\cdot 24 = 288$ intervals per day, and $288\cdot 8 = 2304$, we have successfully accounted for all the missing values in the data set. 
+So for these 8 days, there is no data available at all in `steps`. Since there are 12x24 = 288 intervals per day, and 288x8 = 2304, we have successfully accounted for all the missing values in the data set. 
 
 We will impute the values for these 8 days by using, for each interval, the average number of steps in that interval across the other 53 days for which the data is available. This is put into an `activity_2` data frame:
 
@@ -225,7 +225,7 @@ daily_steps_2 %>%
 
 
 We see that this new distribution is much more sharply peaked around the bin at
-$[10000, 11000]$. This is because the 8 days for which the data was missing, which 
+[10000, 11000]. This is because the 8 days for which the data was missing, which 
 initially were counted as having 0 steps, now have a total number of steps equal to 
 the average daily number of steps, and have been placed in that bin.  
 
